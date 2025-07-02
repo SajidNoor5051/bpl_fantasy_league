@@ -1,4 +1,4 @@
-# BUET Fantasy Premier League - Frontend
+# BPL Fantasy League
 
 A modern, mobile-first fantasy premier league application built with Next.js, TypeScript, Tailwind CSS, and Supabase.
 
@@ -155,4 +155,4 @@ Please follow the established coding standards and design system when contributi
 
 ---
 
-Built with ❤️ for the BUET community 
+Built with ❤️ for the BUET community
