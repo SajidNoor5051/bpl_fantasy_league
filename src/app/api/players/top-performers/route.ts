@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     // Get top players by aggregating fantasy points from player_match_stats

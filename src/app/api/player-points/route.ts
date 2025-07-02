@@ -77,8 +77,8 @@ export async function GET(request: Request) {
 
     // Check if team was created after the gameweek ended
     const teamCreationDate = new Date(teamData.created_at)
-    const gameweekEndDate = new Date(gameweekData.end_date)
-    const teamCreatedAfterGameweek = teamCreationDate > gameweekEndDate
+    const gameweekStartDate = new Date(gameweekData.start_date)
+    const teamCreatedAfterGameweek = teamCreationDate > gameweekStartDate
     
     // If the team was created after the gameweek, return null points for all players
     if (teamCreatedAfterGameweek) {
