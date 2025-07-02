@@ -126,8 +126,7 @@ export default function TeamsPage() {
                   </div>
                   
                   <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                    <span className="text-gray-400">Founded:</span>
-                    <span className="text-white">{team.founded_year || 'Unknown'}</span>
+                    
                   </div>
 
                   {team.team_color && (
