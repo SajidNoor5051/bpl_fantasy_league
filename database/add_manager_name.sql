@@ -1,0 +1,1 @@
+ALTER TABLE teams ADD COLUMN manager_name VARCHAR(100);
