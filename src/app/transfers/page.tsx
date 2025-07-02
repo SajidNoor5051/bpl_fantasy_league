@@ -782,7 +782,7 @@ export default function TransfersPage() {
               {player.position}
             </div>
             <div className="font-medium text-white text-xs text-center px-1 truncate w-full">
-              {player.first_name.charAt(0)}. {player.last_name}
+              {player.first_name}
             </div>
             <div className="text-gray-400 text-xs truncate w-full text-center">
               {player.team_short_name}

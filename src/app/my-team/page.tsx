@@ -602,7 +602,7 @@ export default function MyTeamPage() {
           {player.position}
         </div>
         <div className="font-medium text-white text-[10px] text-center px-1 truncate w-full">
-          {player.last_name}
+          {player.first_name}
         </div>
         <div className="text-gray-400 text-[10px] truncate w-full text-center">
           {player.team_short_name}
@@ -736,7 +736,7 @@ export default function MyTeamPage() {
         {/* Player Info */}
         <div className="flex-grow">
           <div className="flex items-center">
-            <span className="text-white text-sm font-medium">{player.last_name}</span>
+            <span className="text-white text-sm font-medium">{player.first_name}</span>
             {isCaptain && (
               <span className="ml-1.5 bg-yellow-600 text-white text-xs font-bold px-1 rounded-sm">C</span>
             )}
