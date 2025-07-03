@@ -186,3 +186,43 @@ INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_sco
 (21, 2, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Haseeb: 0 minutes
 (22, 2, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Azad: 0 minutes
 (23, 2, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0); -- Adil: 0 minutes 
+
+
+
+
+
+-- gameweek 2
+
+-- Insert Player Match Stats for Santiago Bernabeu Players
+-- Fixture ID 4: Santiago Bernabeu vs Team Incredibles
+-- BPL Fantasy League Season 6
+
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
+-- Players with 70 minutes played
+(49, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Badhon: 0 points (appearance - conceded 4 goals)
+(50, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Sajid: 0 points (appearance - conceded 4 goals)
+(51, 4, 70, 0, 1, false, 0, 0, 0, 0, 0, 0, 5), -- Bashar: 5 points (appearance + assist)
+(52, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Tusher: 0 points (appearance - conceded 4 goals)
+(53, 4, 30, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Shammo: 0 points (appearance - conceded 4 goals)
+(54, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Nipun: 0 points (appearance - conceded 4 goals)
+(55, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Sazzad Rony: 0 points (appearance - conceded 4 goals)
+(56, 4, 70, 0, 0, false, 0, 0, 1, 0, 0, 0, -3), -- Rudra: -3 points (appearance + 1 save - conceded 4 goals - red card)
+(57, 4, 70, 1, 0, false, 1, 0, 0, 0, 0, 0, 7), -- Nadeem: 3 points (appearance + goal - yellow card - conceded 4 goals)
+(58, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Mushfiq: 0 points (appearance - conceded 4 goals)
+(59, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Noman: 0 points (appearance - conceded 4 goals)
+(60, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Ebu: 0 points (appearance - conceded 4 goals)
+
+-- Players with partial minutes
+(66, 4, 30, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Mahir: 1 point (30 minutes played)
+(67, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Sunzid (Sojib): 1 point (10 minutes played)
+(62, 4, 20, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Atik: 1 point (20 minutes played)
+(64, 4, 8, 0, 0, false, 0, 0, 1, 0, 0, 0, 1), -- Sadi: 2 points (8 minutes + 1 save)
+
+-- Remaining players with 0 minutes
+(61, 4, 15, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Jaber: 0 minutes
+(63, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shiyam: 0 minutes
+(65, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Tahmid: 0 minutes
+(68, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Tripta: 0 minutes
+(69, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shahriar Kabir: 0 minutes
+(70, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Arko: 0 minutes
+(71, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0); -- Tasin: 0 minutes

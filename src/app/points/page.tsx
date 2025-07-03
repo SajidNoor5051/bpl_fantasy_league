@@ -381,7 +381,7 @@ export default function PointsPage() {
       >
         {/* Player Name and Position */}
         <div className="text-sm font-medium mb-1">
-          {player.last_name} 
+          {player.first_name} 
           {player.player_id === selectedCaptain && (
             <span className="ml-1.5 bg-yellow-600 text-white text-xs font-bold px-1 rounded-sm">C</span>
           )}
@@ -444,7 +444,7 @@ export default function PointsPage() {
         {/* Player Info */}
         <div className="flex-grow">
           <div className="flex items-center">
-            <span className="text-white text-sm font-medium">{player.last_name}</span>
+            <span className="text-white text-sm font-medium">{player.first_name}</span>
             {player.player_id === selectedCaptain && (
               <span className="ml-1.5 bg-yellow-600 text-white text-xs font-bold px-1 rounded-sm">C</span>
             )}

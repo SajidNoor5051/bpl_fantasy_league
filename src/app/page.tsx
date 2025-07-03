@@ -205,7 +205,7 @@ export default function HomePage() {
                 <div className="text-gray-400 text-xs sm:text-sm">Players</div>
               </div>
               <div className="bg-gray-800 bg-opacity-50 backdrop-blur-lg p-3 sm:p-4 rounded-lg shadow-lg border border-gray-700">
-                <div className="text-primary-400 font-bold text-xl sm:text-2xl">10+</div>
+                <div className="text-primary-400 font-bold text-xl sm:text-2xl">4</div>
                 <div className="text-gray-400 text-xs sm:text-sm">Gameweeks</div>
               </div>
               <div className="bg-gray-800 bg-opacity-50 backdrop-blur-lg p-3 sm:p-4 rounded-lg shadow-lg border border-gray-700">
