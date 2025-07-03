@@ -242,16 +242,9 @@ export default function RulesPage() {
         <div className="mb-6">
           <h3 className="text-xl font-semibold text-white mb-3">Automatic Substitutions</h3>
           <p className="text-gray-300 mb-4">
-            If a player in your starting 11 doesn't play in the gameweek, they will be automatically substituted 
-            with your first substitute player, following these rules:
+            To make the game more exciting, we have made all the players in a team available for points. <b className="text-primary-500">Which means all your team members will be counted for points(Just like a bench Boost!)</b>
           </p>
-          <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>Substitutes will be prioritized in the order you have set them on your bench</li>
-            <li>A substitute will only be used if their position doesn't violate your formation requirements</li>
-            <li>E.g. If your goalkeeper doesn't play, only your substitute goalkeeper can replace them</li>
-            <li>If a defender doesn't play, any defender, midfielder or forward can replace them as long as your formation remains valid</li>
-            <li>A player who doesn't play any minutes in a gameweek is eligible for automatic substitution</li>
-          </ul>
+         
         </div>
         
         <div>
