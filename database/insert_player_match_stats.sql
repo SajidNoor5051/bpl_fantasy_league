@@ -13,7 +13,7 @@ INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_sco
 (117, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Shovon: 2 points (appearance)
 (118, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Tooneer: 2 points (appearance)
 (119, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Jamil: 2 points (appearance)
-(120, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Shoumik: 2 points (appearance)
+(120, 1, 70, 0, 0, false, 0, 0, 2, 0, 0, 0, 2), -- Shoumik: 2 points (appearance)
 (121, 1, 70, 0, 0, false, 1, 0, 0, 0, 0, 0, 1), -- Turno: 1 point (appearance - yellow card)
 (122, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Sabbir: 2 points (appearance)
 (123, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Nazmul: 2 points (appearance)
@@ -131,7 +131,7 @@ INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_sco
 -- First 12 players with 70 minutes played and calculated fantasy points
 INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
 (25, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Arittro: 2 points (appearance)
-(26, 1, 70, 0, 1, false, 0, 0, 0, 0, 0, 0, 5), -- Adnan: 5 points (appearance + assist)
+(26, 1, 70, 0, 1, false, 1, 0, 0, 0, 0, 0, 4), -- Adnan: 5 points (appearance + assist)
 (27, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Mahmud: 2 points (appearance)
 (28, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Shams: 2 points (appearance)
 (29, 1, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Tomal: 2 points (appearance)
@@ -226,3 +226,40 @@ INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_sco
 (69, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shahriar Kabir: 0 minutes
 (70, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Arko: 0 minutes
 (71, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0); -- Tasin: 0 minutes
+
+
+
+
+--team incredibles
+
+-- Insert Player Match Stats for Team Incredibles Players
+-- Fixture ID 4: Santiago Bernabeu vs Team Incredibles
+-- BPL Fantasy League Season 6
+
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
+-- Starting players with 70 minutes played
+(1, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Nirab: 2 points (appearance)
+(2, 4, 60, 0, 0, false, 0, 0, 2, 0, 0, 0, 2), -- Sakib: 2 points (60 minutes + 2 saves, no clean sheet)
+(3, 4, 10, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Shamim: 1 point (10 minutes)
+(4, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Sifat: 2 points (appearance)
+(5, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- ASM Tanver: 2 points (appearance)
+(6, 4, 70, 2, 0, false, 0, 0, 0, 0, 0, 0, 13), -- Tanvir Rana: 13 points (appearance + 2 goals + bonus)
+(7, 4, 0 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Ebrahim: 2 points (appearance)
+(8, 4, 10, 1, 0, false, 0, 0, 0, 0, 0, 0, 5), -- Nayeem: 5 points (10 minutes + goal)
+(9, 4, 60, 0, 2, false, 0, 0, 0, 0, 0, 0, 8), -- Farzin: 8 points (60 minutes + 2 assists)
+(10, 4, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Sami: 2 points (appearance)
+(11, 4, 70, 0, 1, false, 0, 0, 0, 0, 0, 0, 5), -- Mehrab: 5 points (appearance + assist)
+(12, 4, 65, 0, 1, false, 0, 0, 0, 0, 0, 0, 5), -- Ananda: 5 points (65 minutes + assist)
+(13, 4, 60, 1, 0, false, 0, 0, 0, 0, 0, 0, 7), -- Chiranjit: 7 points (60 minutes + goal)
+
+-- Remaining players with 0 minutes played
+(14, 4, 55, 0, 0, false, 1, 0, 0, 0, 0, 0, 1), -- Farhan: 55 minutes
+(15, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Samin: 0 minutes
+(16, 4, 10, 0, 0, false, 0, 0, 1, 0, 0, 0, 0), -- Shimul: 0 minutes
+(17, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shawon: 0 minutes
+(18, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Kabbo: 0 minutes
+(19, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shafin: 0 minutes
+(20, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Reza: 0 minutes
+(21, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Haseeb: 0 minutes
+(22, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Azad: 0 minutes
+(23, 4, 5, 0, 0, false, 0, 0, 0, 0, 0, 0, 1); -- Adil: 5 minutes

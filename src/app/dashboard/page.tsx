@@ -6,7 +6,9 @@ import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 import { 
   User, 
-  ChevronRight
+  ChevronRight,
+  Trophy,
+  Crown
 } from 'lucide-react'
 import NavLayout from '@/components/layout/NavLayout'
 
@@ -35,6 +37,14 @@ type Player = {
   position: string;
 }
 
+type TopTeam = {
+  id: string;
+  teamName: string;
+  points: number;
+  
+  rank: number;
+}
+
 export default function DashboardPage() {
   const { user } = useAuth()
   const router = useRouter()
@@ -53,6 +63,8 @@ export default function DashboardPage() {
   const [upcomingFixtures, setUpcomingFixtures] = useState<Fixture[]>([])
   
   const [topPlayers, setTopPlayers] = useState<Player[]>([])
+  
+  const [topTeams, setTopTeams] = useState<TopTeam[]>([])
 
   // Fetch data from APIs
   const fetchUserStats = async (userId: string) => {
@@ -104,6 +116,18 @@ export default function DashboardPage() {
     }
   }
 
+  const fetchTopTeams = async () => {
+    try {
+      const response = await fetch('/api/players/top-teams')
+      if (response.ok) {
+        const data = await response.json()
+        setTopTeams(data)
+      }
+    } catch (error) {
+      console.error('Error fetching top teams:', error)
+    }
+  }
+
   useEffect(() => {
     // Check authentication status
     const checkAuth = async () => {
@@ -140,7 +164,8 @@ export default function DashboardPage() {
         Promise.all([
           fetchUserStats(userId),
           fetchUpcomingFixtures(),
-          fetchTopPlayers()
+          fetchTopPlayers(),
+          fetchTopTeams()
         ]).finally(() => {
           setLoading(false);
         });
@@ -193,7 +218,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Dashboard Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {/* Team Quick View */}
         <div className="bg-gray-900/80 border border-gray-800 rounded-xl overflow-hidden">
           <div className="bg-gradient-to-r from-primary-600/20 to-transparent p-4 border-b border-gray-800 flex justify-between items-center">
@@ -282,6 +307,43 @@ export default function DashboardPage() {
             ) : (
               <div className="p-6 text-center">
                 <p className="text-gray-400">No top performers data</p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Top Fantasy Teams Leaderboard */}
+        <div className="bg-gray-900/80 border border-gray-800 rounded-xl overflow-hidden flex flex-col">
+          <div className="bg-gradient-to-r from-yellow-600/20 to-transparent p-4 border-b border-gray-800 flex justify-between items-center">
+            <h2 className="text-lg font-semibold text-white">Leaderboard</h2>
+            <Trophy className="h-5 w-5 text-yellow-400" />
+          </div>
+          <div className="divide-y divide-gray-800">
+            {topTeams.length > 0 ? (
+              topTeams.slice(0, 5).map((team, index) => (
+                <div key={team.id} className="p-3 flex justify-between items-center">
+                  <div className="flex items-center space-x-3 min-w-0 flex-1">
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${
+                      index === 0 ? 'bg-yellow-500 text-yellow-900' :
+                      index === 1 ? 'bg-gray-400 text-gray-900' :
+                      index === 2 ? 'bg-amber-600 text-amber-900' :
+                      'bg-gray-700 text-gray-300'
+                    }`}>
+                      {index === 0 ? <Crown className="w-3 h-3" /> : team.rank}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-white font-medium text-sm truncate">{team.teamName}</p>
+                     
+                    </div>
+                  </div>
+                  <div className="bg-yellow-500/20 px-2 py-1 rounded flex-shrink-0">
+                    <span className="text-yellow-300 font-medium text-sm">{team.points} pts</span>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="p-6 text-center">
+                <p className="text-gray-400">No leaderboard data</p>
               </div>
             )}
           </div>
