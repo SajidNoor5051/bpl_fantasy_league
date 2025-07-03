@@ -465,7 +465,7 @@ export default function HomePage() {
               © 2025 BUET Premier League Fantasy. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs sm:text-sm mt-4 md:mt-0 text-center md:text-right">
-              Powered by Hithium • Built for the BUET community
+              Powered by Hithium • Built with ❤️ for the BUET football community.
             </p>
           </div>
         </div>
