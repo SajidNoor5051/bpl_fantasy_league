@@ -43,7 +43,7 @@ export default function AboutPage() {
       <div className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700 mb-8">
         <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
         <p className="text-gray-300 mb-4">
-          BPL Premier League aims to bring the excitement of fantasy sports to Bangladesh Premier League
+          BPL Premier League aims to bring the excitement of  sports to Bangladesh footbal
           fans. Our platform allows users to create their dream teams, compete with friends, and track
           their performance throughout the season.
         </p>
@@ -57,12 +57,12 @@ export default function AboutPage() {
       <div className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700 mb-8">
         <h2 className="text-2xl font-bold text-white mb-4">History</h2>
         <p className="text-gray-300 mb-4">
-          The BUET Premier League Fantasy competition has a rich history dating back to 2012. This marks our 6th season, 
+          The BUET Premier League  has a rich history dating back to 2012. This marks our 6th season, 
           with each year bringing more excitement, competition, and community engagement than the last.
         </p>
         <p className="text-gray-300 mb-4">
           What started as a small competition among engineering students has grown into one of the most anticipated 
-          fantasy leagues in Bangladesh, bringing together football enthusiasts from all departments of BUET and beyond.
+           leagues in BUET, bringing together football enthusiasts from all departments of BUET and beyond.
         </p>
         <p className="text-gray-300">
           Each season has seen innovations to the platform, new features, and an ever-growing community of passionate managers.
@@ -95,21 +95,21 @@ export default function AboutPage() {
                 </tr>
                 <tr>
                   <td className="py-3 pr-6">Season 3</td>
-                  <td className="py-3 pr-6">2022</td>
-                  <td className="py-3 pr-6">---</td>
-                  <td className="py-3">---</td>
+                  <td className="py-3 pr-6">2016</td>
+                  <td className="py-3 pr-6">Team Invictus</td>
+                  <td className="py-3">The Invincible</td>
                 </tr>
                 <tr>
                   <td className="py-3 pr-6">Season 2</td>
-                  <td className="py-3 pr-6">2021</td>
-                  <td className="py-3 pr-6">---</td>
+                  <td className="py-3 pr-6">2014</td>
+                  <td className="py-3 pr-6">Team Khobaib</td>
                   <td className="py-3">---</td>
                 </tr>
                 <tr>
                   <td className="py-3 pr-6">Season 1</td>
-                  <td className="py-3 pr-6">2020</td>
-                  <td className="py-3 pr-6">---</td>
-                  <td className="py-3">---</td>
+                  <td className="py-3 pr-6">2013</td>
+                  <td className="py-3 pr-6">Team Phenomenon FC</td>
+                  <td className="py-3">Slasher FC</td>
                 </tr>
               </tbody>
             </table>

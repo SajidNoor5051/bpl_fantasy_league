@@ -313,12 +313,12 @@ export default function RulesPage() {
         <div className="mb-6">
           <h3 className="text-xl font-semibold text-white mb-3">Tournament Structure</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>Season duration: June 2025 - August 2025</li>
-            <li>10 teams will compete in a double round-robin format</li>
-            <li>Each team plays every other team twice (home and away)</li>
-            <li>Total of 18 matches per team (9 home, 9 away)</li>
+            <li>Season duration: June 20 ,2025 - July 18, 2025</li>
+            <li>5 teams will compete in a round-robin format</li>
+            <li>Each team plays every other team once</li>
+            <li>Total of 4 matches per team</li>
             <li>Points system: 3 points for a win, 1 for a draw, 0 for a loss</li>
-            <li>League standings determined by: Points → Goal Difference → Goals Scored → Head-to-head</li>
+            <li>League standings determined by: Points → Head-to-head → Goal Difference → Goals Scored  </li>
           </ul>
         </div>
         
@@ -329,17 +329,16 @@ export default function RulesPage() {
             <li>Teams must have 7 players minimum to start a match</li>
             <li>Maximum of 5 substitutions allowed per team per match</li>
             <li>All matches will have designated referees and assistant referees</li>
-            <li>Video Assistant Referee (VAR) will be used for critical decisions</li>
+           
           </ul>
         </div>
         
         <div className="mb-6">
           <h3 className="text-xl font-semibold text-white mb-3">Team Regulations</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>Each team must register a squad of 18-25 players</li>
-            <li>Squad registration deadline: May 30, 2025</li>
-            <li>Mid-season transfer window: July 10-17, 2025</li>
-            <li>Teams must wear designated home/away kits to avoid color clashes</li>
+            <li>Each team must register a squad of 23 players by auction</li>
+           
+            <li>Teams must wear designated kits to avoid color clashes</li>
             <li>Each team must have at least 2 dedicated goalkeepers in their squad</li>
           </ul>
         </div>
@@ -347,9 +346,9 @@ export default function RulesPage() {
         <div>
           <h3 className="text-xl font-semibold text-white mb-3">Disciplinary Procedures</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>5 yellow cards = 1 match suspension</li>
+            <li>2 yellow cards = 1 match suspension</li>
             <li>Red card = minimum 1 match suspension (subject to review)</li>
-            <li>Teams failing to appear for scheduled matches may face point deductions</li>
+            
             <li>All disputes will be handled by the BUET Premier League Disciplinary Committee</li>
             <li>Serious misconduct may result in extended suspensions or tournament expulsion</li>
           </ul>
