@@ -38,10 +38,8 @@ type Player = {
 }
 
 type TopTeam = {
-  id: string;
   teamName: string;
   points: number;
-  
   rank: number;
 }
 
@@ -314,30 +312,24 @@ export default function DashboardPage() {
 
         {/* Top Fantasy Teams Leaderboard */}
         <div className="bg-gray-900/80 border border-gray-800 rounded-xl overflow-hidden flex flex-col">
-          <div className="bg-gradient-to-r from-yellow-600/20 to-transparent p-4 border-b border-gray-800 flex justify-between items-center">
+          <div className="bg-gradient-to-r from-primary-600/20 to-transparent p-4 border-b border-gray-800">
             <h2 className="text-lg font-semibold text-white">Leaderboard</h2>
-            <Trophy className="h-5 w-5 text-yellow-400" />
           </div>
           <div className="divide-y divide-gray-800">
             {topTeams.length > 0 ? (
               topTeams.slice(0, 5).map((team, index) => (
-                <div key={team.id} className="p-3 flex justify-between items-center">
-                  <div className="flex items-center space-x-3 min-w-0 flex-1">
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${
-                      index === 0 ? 'bg-yellow-500 text-yellow-900' :
-                      index === 1 ? 'bg-gray-400 text-gray-900' :
-                      index === 2 ? 'bg-amber-600 text-amber-900' :
-                      'bg-gray-700 text-gray-300'
-                    }`}>
-                      {index === 0 ? <Crown className="w-3 h-3" /> : team.rank}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="text-white font-medium text-sm truncate">{team.teamName}</p>
-                     
+                <div key={`${team.teamName}-${index}`} className="p-3 flex justify-between items-center">
+                  <div>
+                    <p className="text-white font-medium">{team.teamName}</p>
+                    <div className="flex items-center mt-1">
+                      <span className="text-xs bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded mr-2">
+                        #{team.rank}
+                      </span>
+                      <span className="text-xs text-gray-400">Fantasy Team</span>
                     </div>
                   </div>
-                  <div className="bg-yellow-500/20 px-2 py-1 rounded flex-shrink-0">
-                    <span className="text-yellow-300 font-medium text-sm">{team.points} pts</span>
+                  <div className="bg-primary-600/20 px-2 py-1 rounded">
+                    <span className="text-primary-300 font-medium">{team.points} pts</span>
                   </div>
                 </div>
               ))
