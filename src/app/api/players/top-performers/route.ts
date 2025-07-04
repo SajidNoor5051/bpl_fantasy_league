@@ -56,7 +56,7 @@ export async function GET() {
     // Convert map to array and sort by points
     const playersList = Array.from(playerPointsMap.values())
       .sort((a, b) => b.points - a.points)
-      .slice(0, 3) // Changed from 3 to 5
+      .slice(0, 5) // Changed from 3 to 5
       
     return NextResponse.json(playersList, { status: 200 })
   } catch (error) {
