@@ -196,9 +196,7 @@ export default function NavLayout({ children }: NavLayoutProps) {
                       <Link href="/profile" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">
                         Profile
                       </Link>
-                      <Link href="/settings" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">
-                        Settings
-                      </Link>
+                      
                       <button 
                         onClick={handleSignOut}
                         className="block w-full text-left px-4 py-2 text-sm text-red-400 hover:bg-gray-700 hover:text-red-300"
