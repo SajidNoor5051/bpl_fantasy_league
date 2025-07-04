@@ -7,6 +7,7 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
   try {
     // Fetch all players with their team information
+   // console.log("Inside fetch players ");
     const { data, error } = await supabase
       .from('players')
       .select(`
@@ -16,6 +17,7 @@ export async function GET() {
         position,
         fantasy_price,
         team_id,
+        fantasy_points,
         teams (
           team_name,
           team_short_name
@@ -43,8 +45,10 @@ export async function GET() {
       team_name: player.teams?.team_name || 'Free Agent',
       team_short_name: player.teams?.team_short_name || 'FA',
       fantasy_price: player.fantasy_price,
-      total_points: 0 // In a real implementation, this would be calculated from match stats
+      fantasy_points: player.fantasy_points // In a real implementation, this would be calculated from match stats
     }));
+
+    //console.log(formattedPlayers[0].total_points + ' name : ' + formattedPlayers[0].first_name)
 
     return NextResponse.json(formattedPlayers, { status: 200 });
   } catch (error) {

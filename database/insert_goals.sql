@@ -20,3 +20,12 @@ INSERT INTO goals (fixture_id, player_id, team_id, minute, is_penalty) VALUES
 (3, 117, 2, 19, false), -- Shovon (NR Warriors) scored at 19 minutes
 (3, 54, 1, 45, false),  -- Nipun (Santiago Bernabeu) scored at 45 minutes
 (3, 57, 1, 55, false);  -- Nadeem (Santiago Bernabeu) scored at 55 minutes 
+
+
+
+-- Goals for Gameweek 2 - Match: Team M&S vs Team Mighty (Fixture ID: 5)
+-- Result: Team M&S 1 - 1 Team Mighty
+
+INSERT INTO goals (fixture_id, player_id, team_id, minute, is_penalty) VALUES 
+(5, 28, 3, 33, false), -- Shams (Team Mighty) scored at 33 minutes
+(5, 79, 4, 49, false); -- Riad (Team M&S) scored at 49 minutes

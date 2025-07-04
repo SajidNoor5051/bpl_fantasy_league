@@ -263,3 +263,74 @@ INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_sco
 (21, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Haseeb: 0 minutes
 (22, 4, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Azad: 0 minutes
 (23, 4, 5, 0, 0, false, 0, 0, 0, 0, 0, 0, 1); -- Adil: 5 minutes
+
+
+
+
+
+
+-- Team M&S Player Match Stats for Gameweek 2 - Match vs Team Mighty (Fixture ID: 5)
+--team M&S
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
+-- Starting XI who played 70 minutes
+-- Update Mukit's stats - he saved 1 penalty and made 3 saves total
+(85, 5, 70, 0, 0, false, 0, 0, 3, 1, 0, 0, 8), -- Mukit (GK): 8 points (2 appearance + 5 penalty save + 1 for saves)
+(80, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Sadat: 2 points (appearance)
+(75, 5, 70, 0, 0, false, 1, 0, 0, 0, 0, 0, 1), -- Sourov: 1 point (appearance - yellow card)
+(93, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Rafin: 2 points (appearance)
+(84, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Nahid: 2 points (appearance)
+(79, 5, 70, 1, 0, false, 0, 0, 0, 0, 0, 0, 10), -- Riad: 10 points (appearance + goal + MOTM bonus)
+(76, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Tanveer: 2 points (appearance)
+(74, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Sayem: 2 points (appearance)
+(77, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Arny: 2 points (appearance)
+(78, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Modhupom: 2 points (appearance)
+
+-- Substitutions
+(83, 5, 68, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Tasfiq: 2 points (68 minutes played)
+(89, 5, 2, 0, 0, false, 1, 0, 0, 0, 0, 0, 0), -- Touhid: 0 points (2 minutes - yellow card)
+
+-- Players who did not play
+(73, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Bilas: 0 minutes
+(81, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Faiyaz: 0 minutes
+(82, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Rabbi: 0 minutes
+(86, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Sahin: 0 minutes
+(87, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Mamun: 0 minutes
+(88, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Rony: 0 minutes
+(90, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Maruf: 0 minutes
+(91, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Siam: 0 minutes
+(92, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shafkat: 0 minutes
+(94, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Nayeem: 0 minutes
+(95, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0); -- Nasif: 0 minutes
+
+--team mighty
+
+
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
+-- Starting XI
+(36, 5, 70, 0, 0, false, 0, 0, 3, 0, 0, 0, 3), -- Fahim (GK): 3 points (2 appearance + 1 for 3 saves)
+(29, 5, 68, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Tomal: 0 points (2 appearance - 2 penalty miss)
+(35, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Mridul: 2 points (appearance)
+(31, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Sagor: 2 points (appearance)
+(34, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Yeasir: 2 points (appearance)
+(33, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Monjur: 2 points (appearance)
+(30, 5, 68, 0, 0, false, 0, 0, 0, 0, 1, 0, 0), -- Tanmoy: 0 points (2 appearance - 2 penalty miss)
+(25, 5, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Arittro: 2 points (appearance)
+(28, 5, 70, 1, 0, false, 0, 0, 0, 0, 0, 0, 6), -- Shams: 6 points (2 appearance + 4 goal)
+(26, 5, 70, 0, 1, false, 0, 0, 0, 0, 0, 0, 5), -- Adnan: 5 points (2 appearance + 3 assist)
+(27, 5, 67, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Mahmud: 2 points (appearance)
+
+-- Substitutions
+(37, 5, 2, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Kamrool: 1 point (2 minutes, sub appearance)
+(40, 5, 3, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Nayeem: 1 point (3 minutes, sub appearance)
+
+-- Players who did not play
+(32, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Mostak: 0 minutes
+(38, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Mashfi: 0 minutes
+(39, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Nazmul: 0 minutes
+(41, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Rahad: 0 minutes
+(42, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Hasib: 0 minutes
+(43, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shahriar: 0 minutes
+(44, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Moshiur: 0 minutes
+(45, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Fahim: 0 minutes
+(46, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Wasik: 0 minutes
+(47, 5, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0); -- Mutakabbir: 0 minutes

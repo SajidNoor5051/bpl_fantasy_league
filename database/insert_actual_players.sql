@@ -137,3 +137,5 @@ INSERT INTO players (player_id, team_id, first_name, position, fantasy_price) VA
 (133, 2, 'Alif', 'FWD', 4.2),
 (134, 2, 'Taki', 'FWD', 4.2),
 (135, 2, 'Sazzad', 'FWD', 4.2); 
+
+
