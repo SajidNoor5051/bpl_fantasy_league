@@ -36,7 +36,7 @@ export async function GET(request: Request) {
     // Next, get the gameweek end date to compare with team creation
     const { data: gameweekData, error: gameweekError } = await supabase
       .from('gameweeks')
-      .select('end_date')
+      .select('start_date')
       .eq('gameweek_id', gameweekId)
       .single() as any
     

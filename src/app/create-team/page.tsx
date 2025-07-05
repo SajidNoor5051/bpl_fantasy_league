@@ -623,16 +623,7 @@ export default function CreateTeamPage() {
           </div>
           
           {/* Debug Information */}
-          <div className="mt-8 p-4 border border-gray-700 rounded-lg bg-gray-900">
-            <h3 className="text-sm font-medium text-gray-400 mb-2">Debug Information (To be removed in production)</h3>
-            <pre className="text-xs text-gray-500 overflow-x-auto">
-              User ID: {user?.id}
-              {"\n"}
-              Team Name: {teamName}
-              {"\n"}
-              Player IDs: {JSON.stringify(selectedPlayers.map(p => p.player_id))}
-            </pre>
-          </div>
+          
         </div>
         
         {/* Player Selection Modal */}
