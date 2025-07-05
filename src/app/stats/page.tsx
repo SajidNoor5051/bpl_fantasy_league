@@ -247,11 +247,11 @@ export default function StatsPage() {
                 <table className="w-full">
                   <thead className="bg-gray-900">
                     <tr>
-                      <th className="text-gray-300 px-6 py-3 text-left text-sm font-semibold">Rank</th>
-                      <th className="text-gray-300 px-6 py-3 text-left text-sm font-semibold">Player</th>
-                      <th className="text-gray-300 px-6 py-3 text-left text-sm font-semibold">Team</th>
-                      <th className="text-gray-300 px-6 py-3 text-left text-sm font-semibold">Pos</th>
-                      <th className="text-gray-300 px-6 py-3 text-left text-sm font-semibold">{category.label}</th>
+                      <th className="text-gray-300 px-6 py-3 text-left text-lg font-semibold">Rank</th>
+                      <th className="text-gray-300 px-6 py-3 text-left text-lg font-semibold">Player</th>
+                      <th className="text-gray-300 px-6 py-3 text-left text-lg font-semibold">Team</th>
+                      <th className="text-gray-300 px-6 py-3 text-left text-lg font-semibold">Pos</th>
+                      <th className="text-gray-300 px-6 py-3 text-left text-lg font-semibold">{category.label}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-700">
@@ -266,21 +266,21 @@ export default function StatsPage() {
                     ) : statsData[category.id] && statsData[category.id].length > 0 ? (
                       statsData[category.id].map((player, index) => (
                         <tr key={player.player_id} className="hover:bg-gray-700">
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-200">
+                          <td className="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-200">
                             {index + 1}
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">
+                          <td className="px-6 py-4 whitespace-nowrap text-lg font-medium text-white">
                             {player.player_name}
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                          <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-300">
                             {player.team_name}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
-                            <span className={`inline-flex items-center justify-center px-2 py-1 text-xs font-bold rounded-md ${getPositionColor(player.position)} bg-opacity-80 text-white`}>
+                            <span className={`inline-flex items-center justify-center px-2 py-1 text-sm font-bold rounded-md ${getPositionColor(player.position)} bg-opacity-80 text-white`}>
                               {player.position}
                             </span>
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-primary-400">
+                          <td className="px-6 py-4 whitespace-nowrap text-lg font-bold text-primary-400">
                             {player.value}
                           </td>
                         </tr>
