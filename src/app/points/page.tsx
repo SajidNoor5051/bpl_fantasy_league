@@ -539,12 +539,14 @@ export default function PointsPage() {
               <div className="text-sm text-gray-400 mb-1">Gameweek Points</div>
               <div className="text-2xl font-bold text-green-400">{team?.gameweek_points || 0}</div>
             </div>
-            <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+
+           <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
               <div className="text-sm text-gray-400 mb-1">Team Value</div>
               <div className="text-2xl font-bold text-yellow-400">
                 £{players.reduce((sum, player) => sum + player.fantasy_price, 0).toFixed(1)}m
               </div>
             </div>
+            
             <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
               <div className="text-sm text-gray-400 mb-1">Remaining Budget</div>
               <div className="text-2xl font-bold text-blue-400">£{team?.budget.toFixed(1) || 0}m</div>

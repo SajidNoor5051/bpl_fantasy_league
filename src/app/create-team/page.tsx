@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 import NavLayout from '@/components/layout/NavLayout'
+import toast, { Toaster } from 'react-hot-toast'
 import { 
   Search, 
   Filter, 
@@ -27,7 +28,7 @@ interface Player {
   team_short_name: string
   fantasy_price: number
   form?: number
-  total_points?: number
+  fantasy_points?: number
 }
 
 // Define team interface
@@ -135,8 +136,8 @@ export default function CreateTeamPage() {
             ? a.fantasy_price - b.fantasy_price
             : b.fantasy_price - a.fantasy_price
         } else {
-          const aPoints = a.total_points || 0
-          const bPoints = b.total_points || 0
+          const aPoints = a.fantasy_points || 0
+          const bPoints = b.fantasy_points || 0
           return sortOrder === 'asc' ? aPoints - bPoints : bPoints - aPoints
         }
       })
@@ -316,7 +317,15 @@ export default function CreateTeamPage() {
       }
       
       // Show success message
-      alert(result.message || 'Team created successfully!');
+      toast.success(result.message || 'Team created successfully!', {
+        duration: 3000,
+        position: 'top-center',
+        style: {
+          background: '#1f2937',
+          color: '#fff',
+          border: '1px solid #10b981',
+        },
+      });
       
       // Redirect to teams/my-team page
       router.push('/my-team');
@@ -418,6 +427,7 @@ export default function CreateTeamPage() {
 
   return (
     <NavLayout>
+      <Toaster />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-6">
@@ -728,7 +738,7 @@ export default function CreateTeamPage() {
                                 £{player.fantasy_price}m
                               </td>
                               <td className="px-2 py-3 text-center text-gray-300 text-sm">
-                                {player.total_points || 0}
+                                {player.fantasy_points || 0}
                               </td>
                               <td className="px-2 py-3 text-right">
                                 <button
