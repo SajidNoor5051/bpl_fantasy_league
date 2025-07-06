@@ -237,7 +237,7 @@ export default function DashboardPage() {
                   </div>
                   <div className="flex-1">
                     <p className="text-white font-medium text-sm sm:text-base">
-                      You have got <span className="text-green-400 font-bold">Bench Boost</span> for the rest of Season 6 of BUET Premier League!
+                      You have got <span className="text-green-400 font-bold">Bench Boost</span> <b>  (which means all 15 players of your team are avalable for points) </b>  for the rest of Season 6 of BUET Premier League!
                     </p>
                   </div>
                 </div>
