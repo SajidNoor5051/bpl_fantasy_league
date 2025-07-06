@@ -8,7 +8,11 @@ import {
   User, 
   ChevronRight,
   Trophy,
-  Crown
+  Crown,
+  Zap,
+  Gift,
+  X,
+  AlertCircle
 } from 'lucide-react'
 import NavLayout from '@/components/layout/NavLayout'
 
@@ -47,6 +51,7 @@ export default function DashboardPage() {
   const { user } = useAuth()
   const router = useRouter()
   const [loading, setLoading] = useState(true)
+  const [showNotice, setShowNotice] = useState(true)
 
   // State for API data
   const [userStats, setUserStats] = useState<UserStats>({
@@ -191,6 +196,74 @@ export default function DashboardPage() {
         <h1 className="text-2xl font-bold text-white mb-2">Welcome back, {user?.user_metadata?.first_name || "Manager"}</h1>
         <p className="text-gray-400">Here's how your fantasy team is performing</p>
       </div>
+
+      {/* Important Notice Banner */}
+      {showNotice && (
+        <div className="mb-8 relative">
+          <div className="bg-gradient-to-r from-primary-600/20 via-primary-500/30 to-primary-400/20 border border-primary-500/50 rounded-xl p-6 backdrop-blur-sm relative overflow-hidden">
+            {/* Animated background elements */}
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute top-2 left-4 w-3 h-3 bg-primary-400/40 rounded-full animate-pulse"></div>
+              <div className="absolute top-6 right-8 w-2 h-2 bg-primary-300/50 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute bottom-4 left-1/3 w-4 h-4 bg-primary-500/30 rounded-full animate-pulse delay-700"></div>
+              <div className="absolute bottom-2 right-1/4 w-2 h-2 bg-primary-400/40 rounded-full animate-pulse delay-1000"></div>
+            </div>
+            
+            {/* Close button */}
+            <button 
+              onClick={() => setShowNotice(false)}
+              className="absolute top-3 right-3 text-primary-300 hover:text-white bg-primary-600/20 hover:bg-primary-600/40 rounded-full p-1.5 transition-all duration-200"
+            >
+              <X className="w-4 h-4" />
+            </button>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="flex items-center mb-4">
+                <div className="bg-primary-500/20 p-2 rounded-lg mr-3">
+                  <AlertCircle className="w-6 h-6 text-primary-300" />
+                </div>
+                <h3 className="text-xl font-bold text-white">
+                  <span className="bg-gradient-to-r from-primary-300 to-primary-100 bg-clip-text text-transparent">
+                    Important Notice!
+                  </span>
+                </h3>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="bg-green-500/20 p-1.5 rounded-full mr-3 mt-0.5">
+                    <Gift className="w-4 h-4 text-green-400" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white font-medium text-sm sm:text-base">
+                      You have got <span className="text-green-400 font-bold">Bench Boost</span> for the rest of Season 6 of BUET Premier League!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-blue-500/20 p-1.5 rounded-full mr-3 mt-0.5">
+                    <Zap className="w-4 h-4 text-blue-400" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white font-medium text-sm sm:text-base">
+                      You can make <span className="text-blue-400 font-bold">unlimited transfers</span> for the remaining gameweeks of BPL Season 6!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Auto-hide indicator */}
+              
+            </div>
+
+            {/* Decorative elements */}
+            <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-primary-500/10 to-transparent rounded-full"></div>
+            <div className="absolute -top-2 -left-2 w-20 h-20 bg-gradient-to-br from-primary-400/10 to-transparent rounded-full"></div>
+          </div>
+        </div>
+      )}
 
       {/* Stats Overview */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
