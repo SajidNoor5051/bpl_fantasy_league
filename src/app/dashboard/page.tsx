@@ -12,7 +12,8 @@ import {
   Zap,
   Gift,
   X,
-  AlertCircle
+  AlertCircle,
+  Clock
 } from 'lucide-react'
 import NavLayout from '@/components/layout/NavLayout'
 
@@ -201,18 +202,42 @@ export default function DashboardPage() {
       {showNotice && (
         <div className="mb-8 relative">
           <div className="bg-gradient-to-r from-primary-600/20 via-primary-500/30 to-primary-400/20 border border-primary-500/50 rounded-xl p-6 backdrop-blur-sm relative overflow-hidden">
-            {/* Animated background elements */}
+            {/* Fire-like animated border elements in primary colors */}
             <div className="absolute top-0 left-0 w-full h-full">
-              <div className="absolute top-2 left-4 w-3 h-3 bg-primary-400/40 rounded-full animate-pulse"></div>
-              <div className="absolute top-6 right-8 w-2 h-2 bg-primary-300/50 rounded-full animate-pulse delay-300"></div>
-              <div className="absolute bottom-4 left-1/3 w-4 h-4 bg-primary-500/30 rounded-full animate-pulse delay-700"></div>
-              <div className="absolute bottom-2 right-1/4 w-2 h-2 bg-primary-400/40 rounded-full animate-pulse delay-1000"></div>
+              {/* Top border fire dots */}
+              <div className="absolute top-1 left-4 w-2 h-2 bg-primary-400/20 rounded-full animate-bounce"></div>
+              <div className="absolute top-2 left-1/4 w-3 h-3 bg-primary-500/25 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute top-1 left-1/2 w-2 h-2 bg-primary-300/20 rounded-full animate-bounce delay-500"></div>
+              <div className="absolute top-2 left-3/4 w-3 h-3 bg-primary-400/25 rounded-full animate-pulse delay-700"></div>
+              <div className="absolute top-1 right-4 w-2 h-2 bg-primary-500/20 rounded-full animate-bounce delay-1000"></div>
+              
+              {/* Bottom border fire dots */}
+              <div className="absolute bottom-1 left-6 w-3 h-3 bg-primary-400/25 rounded-full animate-pulse delay-200"></div>
+              <div className="absolute bottom-2 left-1/3 w-2 h-2 bg-primary-500/20 rounded-full animate-bounce delay-400"></div>
+              <div className="absolute bottom-1 left-2/3 w-3 h-3 bg-primary-300/25 rounded-full animate-pulse delay-600"></div>
+              <div className="absolute bottom-2 right-6 w-2 h-2 bg-primary-400/20 rounded-full animate-bounce delay-800"></div>
+              
+              {/* Left border fire dots */}
+              <div className="absolute top-1/4 left-1 w-2 h-2 bg-primary-500/15 rounded-full animate-pulse delay-150"></div>
+              <div className="absolute top-1/2 left-1 w-3 h-3 bg-primary-400/12 rounded-full animate-bounce delay-350"></div>
+              <div className="absolute top-3/4 left-1 w-2 h-2 bg-primary-300/15 rounded-full animate-pulse delay-550"></div>
+              
+              {/* Right border fire dots */}
+              <div className="absolute top-1/4 right-1 w-3 h-3 bg-primary-400/12 rounded-full animate-bounce delay-250"></div>
+              <div className="absolute top-1/2 right-1 w-2 h-2 bg-primary-500/15 rounded-full animate-pulse delay-450"></div>
+              <div className="absolute top-3/4 right-1 w-3 h-3 bg-primary-300/12 rounded-full animate-bounce delay-650"></div>
+              
+              {/* Corner fire effects */}
+              <div className="absolute top-0 left-0 w-4 h-4 bg-gradient-to-br from-primary-500/20 to-primary-400/15 rounded-full animate-ping"></div>
+              <div className="absolute top-0 right-0 w-4 h-4 bg-gradient-to-bl from-primary-500/20 to-primary-400/15 rounded-full animate-ping delay-300"></div>
+              <div className="absolute bottom-0 left-0 w-4 h-4 bg-gradient-to-tr from-primary-500/20 to-primary-400/15 rounded-full animate-ping delay-600"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 bg-gradient-to-tl from-primary-500/20 to-primary-400/15 rounded-full animate-ping delay-900"></div>
             </div>
             
             {/* Close button */}
             <button 
               onClick={() => setShowNotice(false)}
-              className="absolute top-3 right-3 text-primary-300 hover:text-white bg-primary-600/20 hover:bg-primary-600/40 rounded-full p-1.5 transition-all duration-200"
+              className="absolute top-3 right-3 text-primary-300 hover:text-white bg-primary-600/20 hover:bg-primary-600/40 rounded-full p-1.5 transition-all duration-200 z-20"
             >
               <X className="w-4 h-4" />
             </button>
@@ -225,23 +250,37 @@ export default function DashboardPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white">
                   <span className="bg-gradient-to-r from-primary-300 to-primary-100 bg-clip-text text-transparent">
-                    Important Notice!
+                    ⚠️ IMPORTANT NOTICE!
                   </span>
                 </h3>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-4">
+                {/* Transfer Deadline - Most Important */}
+                <div className="flex items-start bg-primary-500/10 border border-primary-500/30 rounded-lg p-3">
+                  <div className="bg-primary-500/20 p-1.5 rounded-full mr-3 mt-0.5">
+                    <Clock className="w-4 h-4 text-primary-400 animate-pulse" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white font-medium text-sm sm:text-base">
+                      <span className="text-primary-400 font-bold">TRANSFER DEADLINE:</span> The transfer deadline for this gameweek is on <span className="text-primary-300 font-bold">Thursday, 10 July at 1:00 PM</span>. Transfers made after that will be counted for the next gameweek!
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bench Boost Message */}
                 <div className="flex items-start">
                   <div className="bg-green-500/20 p-1.5 rounded-full mr-3 mt-0.5">
                     <Gift className="w-4 h-4 text-green-400" />
                   </div>
                   <div className="flex-1">
                     <p className="text-white font-medium text-sm sm:text-base">
-                      You have got <span className="text-green-400 font-bold">Bench Boost</span> <b>  (which means all 15 players of your team are avalable for points) </b>  for the rest of Season 6 of BUET Premier League!
+                      You have got <span className="text-green-400 font-bold">Bench Boost</span> <b>(which means all 15 players of your team are available for points)</b> for the rest of Season 6 of BUET Premier League!
                     </p>
                   </div>
                 </div>
 
+                {/* Unlimited Transfers Message */}
                 <div className="flex items-start">
                   <div className="bg-blue-500/20 p-1.5 rounded-full mr-3 mt-0.5">
                     <Zap className="w-4 h-4 text-blue-400" />
@@ -253,14 +292,13 @@ export default function DashboardPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Auto-hide indicator */}
-              
             </div>
 
-            {/* Decorative elements */}
-            <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-primary-500/10 to-transparent rounded-full"></div>
-            <div className="absolute -top-2 -left-2 w-20 h-20 bg-gradient-to-br from-primary-400/10 to-transparent rounded-full"></div>
+            {/* Enhanced decorative elements */}
+            <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-primary-500/10 to-primary-400/5 rounded-full animate-pulse"></div>
+            <div className="absolute -top-2 -left-2 w-20 h-20 bg-gradient-to-br from-primary-400/10 to-primary-300/5 rounded-full animate-pulse delay-500"></div>
+            <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-gradient-to-tr from-primary-500/8 to-primary-400/5 rounded-full animate-pulse delay-1000"></div>
+            <div className="absolute -top-2 -right-2 w-18 h-18 bg-gradient-to-bl from-primary-300/8 to-primary-400/5 rounded-full animate-pulse delay-1500"></div>
           </div>
         </div>
       )}
