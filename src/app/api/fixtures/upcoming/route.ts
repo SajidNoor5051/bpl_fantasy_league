@@ -29,8 +29,8 @@ export async function GET() {
     // Format the fixtures data
     const formattedFixtures = fixtures ? fixtures.map((fixture :any)=> ({
       id: fixture.fixture_id,
-      homeTeam: fixture.home_team ? fixture.home_team.team_name : 'Unknown Team',
-      awayTeam: fixture.away_team ? fixture.away_team.team_name : 'Unknown Team',
+      homeTeam: fixture.home_team ? fixture.home_team.team_name : 'TBD',
+      awayTeam: fixture.away_team ? fixture.away_team.team_name : 'TBD',
       homeTeamLogo: fixture.home_team ? fixture.home_team.logo_url : null,
       awayTeamLogo: fixture.away_team ? fixture.away_team.logo_url : null,
       date: new Date(fixture.match_date).toLocaleDateString('en-US', {
