@@ -224,3 +224,99 @@ INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_sco
 (133, 6, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Alif: 0 minutes
 (134, 6, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Taki: 0 minutes
 (135, 6, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0); -- Sazzad: 0 minutes
+
+
+
+
+
+-- Badhon: 70 mins, 2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (49, 16, 70, 2);
+
+-- Sajid: 70 mins, 2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (50, 16, 70, 2);
+
+-- Bashar: 70 mins, 2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (51, 16, 70, 2);
+
+-- Tusher: 70 mins, own goal, 2 goals conceded, 1 yellow, -2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points, own_goals, goals_conceded, yellow_cards)
+VALUES (52, 16, 70, -2, 1, 2, 1);
+
+-- Shammo: 70 mins, 2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (53, 16, 70, 2);
+
+-- Nipun: 50 mins (sub), 2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (54, 16, 50, 2);
+
+-- Sazzad Rony: 70 mins, 2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (55, 16, 70, 2);
+
+-- Rudra: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (56, 16, 0, 0);
+
+-- Nadeem: 70 mins, 2 goals conceded, 1 point
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points, goals_conceded)
+VALUES (57, 16, 70, 1, 2);
+
+-- Mushfiq: 70 mins, 2 goals conceded, 1 point
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points, goals_conceded)
+VALUES (58, 16, 70, 1, 2);
+
+-- Noman: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (59, 16, 0, 0);
+
+-- Ebu: 70 mins, 2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (60, 16, 70, 2);
+
+-- Jaber: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (61, 16, 0, 0);
+
+-- Atik: 20 mins (sub), 1 point
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (62, 16, 20, 1);
+
+-- Shiyam: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (63, 16, 0, 0);
+
+-- Sadi (GK): 70 mins, 2 goals conceded, 2 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points, goals_conceded)
+VALUES (64, 16, 70, 2, 2);
+
+-- Tahmid: 15 mins (sub), 1 point
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (65, 16, 15, 1);
+
+-- Mahir: 20 mins, 1 point
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (66, 16, 20, 1);
+
+-- Sunzid: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (67, 16, 0, 0);
+
+-- Tripta: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (68, 16, 0, 0);
+
+-- Shahriar Kabir: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (69, 16, 0, 0);
+
+-- Arko: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (70, 16, 0, 0);
+
+-- Tasin: 0 mins, 0 points
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
+VALUES (71, 16, 0, 0);
