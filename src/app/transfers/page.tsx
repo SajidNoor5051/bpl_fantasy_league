@@ -173,15 +173,15 @@ export default function TransfersPage() {
           setFixtures(data.fixtures || [])
           
           // Initialize team counts
-          const newTeamCounts: TeamCounts = {}
-          data.players.forEach((player: Player) => {
-            if (newTeamCounts[player.team_id]) {
-              newTeamCounts[player.team_id]++
-            } else {
-              newTeamCounts[player.team_id] = 1
-            }
-          })
-          setTeamCounts(newTeamCounts)
+          // const newTeamCounts: TeamCounts = {}
+          // data.players.forEach((player: Player) => {
+          //   if (newTeamCounts[player.team_id]) {
+          //     newTeamCounts[player.team_id]++
+          //   } else {
+          //     newTeamCounts[player.team_id] = 1
+          //   }
+          // })
+          // setTeamCounts(newTeamCounts)
           
           // Fetch available players for transfers
           fetchAllPlayers()
@@ -401,31 +401,31 @@ export default function TransfersPage() {
       return;
     }
     
-    // Validate team limit (max 5 players from one team)
-    const teamCountsCopy = {...teamCounts}
+    // Validate team limit (max 5 players from one team) - DISABLED FOR FINAL MATCH
+    // const teamCountsCopy = {...teamCounts}
     
-    // Decrement count for the outgoing player's team
-    if (teamCountsCopy[selectedPlayerOut.team_id]) {
-      teamCountsCopy[selectedPlayerOut.team_id]--
-    }
+    // // Decrement count for the outgoing player's team
+    // if (teamCountsCopy[selectedPlayerOut.team_id]) {
+    //   teamCountsCopy[selectedPlayerOut.team_id]--
+    // }
     
-    // Increment count for the incoming player's team
-    if (teamCountsCopy[newPlayer.team_id]) {
-      teamCountsCopy[newPlayer.team_id]++
-    } else {
-      teamCountsCopy[newPlayer.team_id] = 1
-    }
+    // // Increment count for the incoming player's team
+    // if (teamCountsCopy[newPlayer.team_id]) {
+    //   teamCountsCopy[newPlayer.team_id]++
+    // } else {
+    //   teamCountsCopy[newPlayer.team_id] = 1
+    // }
     
-    if (teamCountsCopy[newPlayer.team_id] > 5) {
-      const errorMsg = 'Maximum 5 players allowed from one team';
-      setError(errorMsg);
-      toast.error(errorMsg, {
-        duration: 3000,
-        position: 'top-right',
-      });
-      setTimeout(() => setError(null), 3000);
-      return;
-    }
+    // if (teamCountsCopy[newPlayer.team_id] > 5) {
+    //   const errorMsg = 'Maximum 5 players allowed from one team';
+    //   setError(errorMsg);
+    //   toast.error(errorMsg, {
+    //     duration: 3000,
+    //     position: 'top-right',
+    //   });
+    //   setTimeout(() => setError(null), 3000);
+    //   return;
+    // }
     
     // Calculate new budget
     const priceDifference = newPlayer.fantasy_price - selectedPlayerOut.fantasy_price
@@ -501,7 +501,7 @@ export default function TransfersPage() {
     
     // Update team counts and budget
     setMyTeamPlayers(updatedPlayers)
-    setTeamCounts(teamCountsCopy)
+    // setTeamCounts(teamCountsCopy) // DISABLED FOR FINAL MATCH
     setBudgetRemaining(newBudget)
     
     // Close modal
@@ -527,16 +527,16 @@ export default function TransfersPage() {
       return p
     })
     
-    // Update team counts for reverting
-    const teamCountsCopy = {...teamCounts}
-    if (teamCountsCopy[transferToRevert.incomingPlayer.team_id]) {
-      teamCountsCopy[transferToRevert.incomingPlayer.team_id]--
-    }
-    if (teamCountsCopy[transferToRevert.outgoingPlayer.team_id]) {
-      teamCountsCopy[transferToRevert.outgoingPlayer.team_id]++
-    } else {
-      teamCountsCopy[transferToRevert.outgoingPlayer.team_id] = 1
-    }
+    // Update team counts for reverting - DISABLED FOR FINAL MATCH
+    // const teamCountsCopy = {...teamCounts}
+    // if (teamCountsCopy[transferToRevert.incomingPlayer.team_id]) {
+    //   teamCountsCopy[transferToRevert.incomingPlayer.team_id]--
+    // }
+    // if (teamCountsCopy[transferToRevert.outgoingPlayer.team_id]) {
+    //   teamCountsCopy[transferToRevert.outgoingPlayer.team_id]++
+    // } else {
+    //   teamCountsCopy[transferToRevert.outgoingPlayer.team_id] = 1
+    // }
     
     // Restore the budget
     const newBudget = budgetRemaining + transferToRevert.priceDifference
@@ -546,7 +546,7 @@ export default function TransfersPage() {
     setCurrentSquadPlayerIds(updatedSquadPlayerIds);
     
     setMyTeamPlayers(updatedPlayers)
-    setTeamCounts(teamCountsCopy)
+    // setTeamCounts(teamCountsCopy) // DISABLED FOR FINAL MATCH
     setBudgetRemaining(newBudget)
     
     // Update the unsaved changes status
@@ -713,16 +713,16 @@ export default function TransfersPage() {
     // Reset squad player IDs to original team
     setCurrentSquadPlayerIds(originalTeamPlayers.map(p => p.player_id))
     
-    // Recalculate team counts
-    const newTeamCounts: TeamCounts = {}
-    originalTeamPlayers.forEach(player => {
-      if (newTeamCounts[player.team_id]) {
-        newTeamCounts[player.team_id]++
-      } else {
-        newTeamCounts[player.team_id] = 1
-      }
-    })
-    setTeamCounts(newTeamCounts)
+    // Recalculate team counts - DISABLED FOR FINAL MATCH
+    // const newTeamCounts: TeamCounts = {}
+    // originalTeamPlayers.forEach(player => {
+    //   if (newTeamCounts[player.team_id]) {
+    //     newTeamCounts[player.team_id]++
+    //   } else {
+    //     newTeamCounts[player.team_id] = 1
+    //   }
+    // })
+    // setTeamCounts(newTeamCounts)
     
     // Show cancellation toast
     toast('All pending transfers cancelled', {
@@ -1078,20 +1078,20 @@ export default function TransfersPage() {
                           // Check if player can be selected based on budget
                           const canSelect = budgetRemaining >= priceDifference
                           
-                          // Check team limit
-                          const teamCountsCopy = {...teamCounts}
-                          if (teamCountsCopy[selectedPlayerOut.team_id]) {
-                            teamCountsCopy[selectedPlayerOut.team_id]--
-                          }
+                          // Check team limit - DISABLED FOR FINAL MATCH
+                          // const teamCountsCopy = {...teamCounts}
+                          // if (teamCountsCopy[selectedPlayerOut.team_id]) {
+                          //   teamCountsCopy[selectedPlayerOut.team_id]--
+                          // }
                           
-                          if (teamCountsCopy[player.team_id]) {
-                            teamCountsCopy[player.team_id]++
-                          } else {
-                            teamCountsCopy[player.team_id] = 1
-                          }
+                          // if (teamCountsCopy[player.team_id]) {
+                          //   teamCountsCopy[player.team_id]++
+                          // } else {
+                          //   teamCountsCopy[player.team_id] = 1
+                          // }
                           
-                          const withinTeamLimit = teamCountsCopy[player.team_id] <= 5
-                          const canSelectFinal = canSelect && withinTeamLimit
+                          // const withinTeamLimit = teamCountsCopy[player.team_id] <= 5
+                          const canSelectFinal = canSelect // && withinTeamLimit
                           
                           return (
                             <div 
@@ -1155,20 +1155,20 @@ export default function TransfersPage() {
                             // Check if player can be selected based on budget
                             const canSelect = budgetRemaining >= priceDifference
                             
-                            // Check team limit
-                            const teamCountsCopy = {...teamCounts}
-                            if (teamCountsCopy[selectedPlayerOut.team_id]) {
-                              teamCountsCopy[selectedPlayerOut.team_id]--
-                            }
+                            // Check team limit - DISABLED FOR FINAL MATCH
+                            // const teamCountsCopy = {...teamCounts}
+                            // if (teamCountsCopy[selectedPlayerOut.team_id]) {
+                            //   teamCountsCopy[selectedPlayerOut.team_id]--
+                            // }
                             
-                            if (teamCountsCopy[player.team_id]) {
-                              teamCountsCopy[player.team_id]++
-                            } else {
-                              teamCountsCopy[player.team_id] = 1
-                            }
+                            // if (teamCountsCopy[player.team_id]) {
+                            //   teamCountsCopy[player.team_id]++
+                            // } else {
+                            //   teamCountsCopy[player.team_id] = 1
+                            // }
                             
-                            const withinTeamLimit = teamCountsCopy[player.team_id] <= 5
-                            const canSelectFinal = canSelect && withinTeamLimit
+                            // const withinTeamLimit = teamCountsCopy[player.team_id] <= 5
+                            const canSelectFinal = canSelect // && withinTeamLimit
                             
                             return (
                               <tr 

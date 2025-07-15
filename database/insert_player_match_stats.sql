@@ -320,3 +320,147 @@ VALUES (70, 16, 0, 0);
 -- Tasin: 0 mins, 0 points
 INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, fantasy_points)
 VALUES (71, 16, 0, 0);
+
+-- Team Mighty Player Match Stats for Fixture 17: Team Mighty vs The Incredibles
+-- Result: Team Mighty 0 - 0 The Incredibles
+-- BPL Fantasy League Season 6
+
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
+-- Starting XI
+(36, 17, 70, 0, 0, true, 0, 0, 2, 0, 0, 0, 6), -- Fahim (GK): 6 points (2 appearance + 4 clean sheet)
+(29, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 9), -- Tomal: 9 points (2 appearance + 4 clean sheet + 3 MOTM bonus)
+(31, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 6), -- Sagor: 6 points (2 appearance + 4 clean sheet)
+(35, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 6), -- Mridul: 6 points (2 appearance + 4 clean sheet)
+(34, 17, 70, 0, 0, true, 1, 0, 0, 0, 0, 0, 5), -- Yeasir: 5 points (2 appearance + 4 clean sheet - 1 yellow card)
+(33, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 3), -- Monjur: 3 points (2 appearance + 1 midfielder)
+(30, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 3), -- Tanmoy: 3 points (2 appearance + 1 midfielder)
+(25, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 3), -- Arittro: 3 points (2 appearance + 1 midfielder)
+(28, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 2), -- Shams: 2 points (appearance)
+(26, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 2), -- Adnan: 2 points (appearance)
+(27, 17, 70, 0, 0, true, 1, 0, 0, 0, 0, 0, 1), -- Mahmud: 1 point (2 appearance - 1 yellow card)
+
+-- Players who did not play
+(32, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Mostak: 0 minutes
+(37, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Kamrool: 0 minutes
+(38, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Mashfi: 0 minutes
+(39, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Nazmul: 0 minutes
+(40, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Nayeem: 0 minutes
+(41, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Rahad: 0 minutes
+(42, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Hasib: 0 minutes
+(43, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shahriar: 0 minutes
+(44, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Moshiur: 0 minutes
+(45, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Fahim: 0 minutes
+(46, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Wasik: 0 minutes
+(47, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0); -- Mutakabbir: 0 minutes
+
+-- Team Incredibles Player Match Stats for Fixture 17: Team Mighty vs The Incredibles
+-- Result: Team Mighty 0 - 0 The Incredibles
+-- BPL Fantasy League Season 6
+
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
+-- Starting XI
+(2, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 6), -- Sakib (GK): 6 points (2 appearance + 4 clean sheet)
+(14, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 6), -- Farhan: 6 points (2 appearance + 4 clean sheet)
+(10, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 6), -- Sami: 6 points (2 appearance + 4 clean sheet)
+(5, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 6), -- ASM Tanver: 6 points (2 appearance + 4 clean sheet)
+(11, 17, 55, 0, 0, true, 0, 0, 0, 0, 0, 0, 6), -- Mehrab: 6 points (2 appearance + 4 clean sheet)
+(4, 17, 70, 0, 0, true, 0, 0, 0, 0, 0, 0, 6), -- Sifat: 6 points (2 appearance + 4 clean sheet)
+(1, 17, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 3), -- Nirab: 3 points (2 appearance + 1 midfielder)
+(9, 17, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 3), -- Farzin: 3 points (2 appearance + 1 midfielder)
+(12, 17, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Ananda: 2 points (appearance)
+(6, 17, 70, 0, 0, false, 1, 0, 0, 0, 0, 0, 1), -- Tanvir Rana: 1 point (2 appearance - 1 yellow card)
+(13, 17, 63, 0, 0, false, 0, 0, 0, 0, 0, 0, 2), -- Chiranjit: 2 points (appearance)
+
+-- Substitutes
+(8, 17, 7, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Nayeem: 1 point (7 minutes)
+(20, 17, 5, 0, 0, false, 0, 0, 0, 0, 0, 0, 1), -- Reza: 1 point (5 minutes)
+
+-- Players who did not play
+(3, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shamim: 0 minutes
+(7, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Ebrahim: 0 minutes
+(15, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Samin: 0 minutes
+(16, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shimul: 0 minutes
+(17, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shawon: 0 minutes
+(18, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Kabbo: 0 minutes
+(19, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Shafin: 0 minutes
+(21, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Haseeb: 0 minutes
+(22, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0), -- Azad: 0 minutes
+(23, 17, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0); -- Adil: 0 minutes
+
+
+
+
+
+
+
+
+
+-- Insert Player Match Stats for Fixture ID 19: Team Mighty vs Santiago Bernabeu
+
+-- Team Mighty Players
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
+-- Players with special events
+(27, 19, 62, 2, 0, false, 0, 0, 0, 0, 0, 0, 13), -- Mahmud: 13 points (2 appearance + 8 goals + 3 MOTM bonus)
+(26, 19, 70, 0, 1, false, 0, 0, 0, 0, 0, 0, 5),  -- Adnan: 5 points (2 appearance + 3 assist)
+(28, 19, 63, 0, 1, false, 1, 0, 0, 0, 0, 0, 4),  -- Shams: 4 points (2 appearance + 3 assist - 1 yellow)
+(30, 19, 60, 0, 0, false, 1, 0, 0, 0, 0, 0, 1),  -- Tanmoy: 1 point (2 appearance - 1 yellow)
+(35, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 1, 0),  -- Mridul: 0 points (2 appearance - 2 own goal)
+
+-- Starting XI (appearance only)
+(36, 19, 70, 0, 0, false, 0, 0, 3, 0, 0, 0, 3),  -- Fahim (GK)
+(29, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Tomal
+(31, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Sagor
+(34, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Yeasir
+(33, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Monjur
+(25, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Arittro
+
+-- Substitutes
+(38, 19, 10, 0, 0, false, 0, 0, 0, 0, 0, 0, 1),  -- Mashfi: 1 point (10 minutes)
+(42, 19, 8, 0, 0, false, 0, 0, 0, 0, 0, 0, 1),   -- Hasib: 1 point (8 minutes)
+(39, 19, 7, 0, 0, false, 0, 0, 0, 0, 0, 0, 1),   -- Nazmul: 1 point (7 minutes)
+
+-- Players who did not play
+(32, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Mostak
+(37, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Kamrool
+(40, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Nayeem
+(41, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Rahad
+(43, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Shahriar
+(44, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Moshiur
+(45, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Fahim
+(46, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Wasik
+(47, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Mutakabbir
+(48, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0);   -- Nishat
+
+
+
+-- Santiago Bernabeu Players
+INSERT INTO player_match_stats (player_id, fixture_id, minutes_played, goals_scored, assists, clean_sheet, yellow_cards, red_cards, saves, penalties_saved, penalties_missed, own_goals, fantasy_points) VALUES 
+-- Players with special events
+(57, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 1, -1),  -- Nadeem: 0 points (2 appearance - 2 own goal)
+
+-- Starting XI (appearance only)
+(49, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Badhon
+(50, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Sajid
+(51, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Bashar
+(52, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 1),  -- Tusher: 1 point (2 appearance - 1 for conceding 3 goals)
+(53, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Shammo
+(54, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Nipun
+(55, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Sazzad Rony
+(56, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Rudra
+(58, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 1),  -- Mushfiq: 1 point (2 appearance - 1 for conceding 3 goals)
+(59, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),  -- Noman
+(60, 19, 70, 0, 0, false, 0, 0, 0, 0, 0, 0, 2),  -- Ebu
+
+-- Players who did not play
+(61, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Jaber
+(62, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Atik
+(63, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Shiyam
+(64, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Sadi
+(65, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Tahmid
+(66, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Mahir
+(67, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Sunzid
+(68, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Tripta
+(69, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Shahriar Kabir
+(70, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),   -- Arko
+(71, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0),  -- Tasin
+(72, 19, 0, 0, 0, false, 0, 0, 0, 0, 0, 0, 0);   -- Sayem
