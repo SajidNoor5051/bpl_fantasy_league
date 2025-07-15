@@ -256,6 +256,18 @@ export default function DashboardPage() {
               </div>
 
               <div className="space-y-4">
+                {/* Team Limit Removal - Most Important for Final */}
+                <div className="flex items-start bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/40 rounded-lg p-3">
+                  <div className="bg-amber-500/20 p-1.5 rounded-full mr-3 mt-0.5">
+                    <Trophy className="w-4 h-4 text-amber-400 animate-pulse" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white font-medium text-sm sm:text-base">
+                      <span className="text-amber-400 font-bold">🏆 FINAL MATCH SPECIAL RULE:</span> There is <span className="text-amber-300 font-bold">NO LIMIT</span> on how many players you can select from any single team for the <span className="text-amber-300 font-bold">BPL Season 6 Final</span>! Stack your team with your favorite players! 🚀
+                    </p>
+                  </div>
+                </div>
+
                 {/* Transfer Deadline - Most Important */}
                 <div className="flex items-start bg-primary-500/10 border border-primary-500/30 rounded-lg p-3">
                   <div className="bg-primary-500/20 p-1.5 rounded-full mr-3 mt-0.5">
@@ -263,7 +275,7 @@ export default function DashboardPage() {
                   </div>
                   <div className="flex-1">
                     <p className="text-white font-medium text-sm sm:text-base">
-                      <span className="text-primary-400 font-bold">TRANSFER DEADLINE:</span> The transfer deadline for this gameweek is on <span className="text-primary-300 font-bold">Thursday, 10 July at 1:00 PM</span>. Transfers made after that will be counted for the next gameweek!
+                      <span className="text-primary-400 font-bold">TRANSFER DEADLINE:</span> The transfer deadline for this gameweek is on <span className="text-primary-300 font-bold">Friday, 18 July at 1:00 PM</span>.
                     </p>
                   </div>
                 </div>
