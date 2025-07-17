@@ -142,7 +142,11 @@ export async function GET() {
       // We simply check who won the direct match between the two teams
       if (a.h2h[b.team_id]) {
         // Direct head-to-head comparison
-        return b.h2h[a.team_id].points - a.h2h[b.team_id].points
+        const h2hDiff = b.h2h[a.team_id].points - a.h2h[b.team_id].points
+        if (h2hDiff !== 0) {
+          return h2hDiff  // Return only if there's a clear winner
+        }
+        // If head-to-head is tied (draw), continue to goal difference
       }
       
       // If there's no direct match yet or they drew, check goal difference
