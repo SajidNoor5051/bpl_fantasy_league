@@ -168,8 +168,16 @@ export async function GET(request: NextRequest) {
       // Convert map to array and sort by the stat value
       data = Array.from(playerStatsMap.values())
         .filter(player => player.value > 0)  // Only include players with positive stats
-        .sort((a, b) => b.value - a.value)
-        .slice(0, 10); // Limit to top 10 players
+        .sort((a, b) => b.value - a.value);
+      
+      // Apply limit based on category
+      if (category === 'goals' || category === 'assists') {
+        // Show all players for goals and assists
+        // No limit applied
+      } else {
+        // Limit to top 10 for other categories
+        data = data.slice(0, 10);
+      }
     }
 
     return NextResponse.json({ 
