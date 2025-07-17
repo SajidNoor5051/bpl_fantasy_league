@@ -40,6 +40,8 @@ export default function StatsPage() {
   const [loading, setLoading] = useState(true)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
+  const [tableScrollPositions, setTableScrollPositions] = useState<Record<string, number>>({})
   
   // Refs for section navigation
   const sectionRefs = {
@@ -138,6 +140,57 @@ export default function StatsPage() {
       case 'FWD': return 'bg-yellow-500'
       default: return 'bg-gray-500'
     }
+  }
+
+  // Toggle expanded state for a category
+  const toggleExpanded = (categoryId: string) => {
+    const isCurrentlyExpanded = expandedCategories[categoryId]
+    
+    if (isCurrentlyExpanded) {
+      // Going from expanded to collapsed - scroll back to saved position
+      const savedPosition = tableScrollPositions[categoryId]
+      if (savedPosition !== undefined) {
+        window.scrollTo({
+          top: savedPosition,
+          behavior: 'smooth'
+        })
+        // Clear the stored position
+        setTableScrollPositions(prev => {
+          const newPositions = { ...prev }
+          delete newPositions[categoryId]
+          return newPositions
+        })
+      }
+    } else {
+      // Going from collapsed to expanded - remember current position
+      setTableScrollPositions(prev => ({
+        ...prev,
+        [categoryId]: window.scrollY
+      }))
+    }
+    
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryId]: !prev[categoryId]
+    }))
+  }
+
+  // Get display data for a category (limited or full)
+  const getDisplayData = (categoryId: string) => {
+    const data = statsData[categoryId] || []
+    const isExpanded = expandedCategories[categoryId]
+    
+    if (isExpanded) {
+      return data // Show all data
+    } else {
+      return data.slice(0, 10) // Show first 10
+    }
+  }
+
+  // Check if category has more than 10 items
+  const hasMoreData = (categoryId: string) => {
+    const data = statsData[categoryId] || []
+    return data.length > 10
   }
 
   // Main content for the stats page
@@ -264,7 +317,7 @@ export default function StatsPage() {
                         </td>
                       </tr>
                     ) : statsData[category.id] && statsData[category.id].length > 0 ? (
-                      statsData[category.id].map((player, index) => (
+                      getDisplayData(category.id).map((player, index) => (
                         <tr key={player.player_id} className="hover:bg-gray-700">
                           <td className="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-200">
                             {index + 1}
@@ -295,6 +348,32 @@ export default function StatsPage() {
                   </tbody>
                 </table>
               </div>
+              
+              {/* View More/Less Button */}
+              {hasMoreData(category.id) && (
+                <div className="px-6 py-3 border-t border-gray-700 bg-gray-800">
+                  <button
+                    onClick={() => toggleExpanded(category.id)}
+                    className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-md transition-colors duration-200 flex items-center justify-center mx-auto"
+                  >
+                    {expandedCategories[category.id] ? (
+                      <>
+                        <span>View Less</span>
+                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                        </svg>
+                      </>
+                    ) : (
+                      <>
+                        <span>View More ({statsData[category.id].length - 10} more)</span>
+                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </>
+                    )}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         ))}
