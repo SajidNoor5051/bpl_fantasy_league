@@ -245,10 +245,10 @@ export default function DashboardPage() {
             {/* Content */}
             <div className="relative z-10">
               <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-r from-primary-500/30 to-primary-400/30 p-3 rounded-lg mr-4">
-                  <Trophy className="w-8 h-8 text-primary-300 animate-pulse" />
+                <div className="bg-gradient-to-r from-primary-500/30 to-primary-400/30 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4">
+                  <Trophy className="w-6 h-6 sm:w-8 sm:h-8 text-primary-300 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">
                   <span className="bg-gradient-to-r from-primary-300 via-primary-200 to-primary-100 bg-clip-text text-transparent animate-pulse">
                     🏆 BPL SEASON 6 CHAMPION ANNOUNCED! 🏆
                   </span>
@@ -258,25 +258,25 @@ export default function DashboardPage() {
               <div className="space-y-6">
                 {/* Winner Announcement */}
                 <div className="text-center">
-                  <div className="bg-gradient-to-r from-primary-500/20 via-primary-400/20 to-primary-300/20 border-2 border-primary-400/50 rounded-xl p-6 mb-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  <div className="bg-gradient-to-r from-primary-500/20 via-primary-400/20 to-primary-300/20 border-2 border-primary-400/50 rounded-xl p-4 sm:p-6 mb-4">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
                       <span className="bg-gradient-to-r from-primary-300 via-primary-200 to-primary-100 bg-clip-text text-transparent">
                         🎉 CONGRATULATIONS! 🎉
                       </span>
                     </h2>
-                    <p className="text-2xl md:text-3xl font-bold text-white">
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
                       <span className="bg-gradient-to-r from-primary-300 via-primary-200 to-primary-100 bg-clip-text text-transparent">
                         THE WINNER OF BPL SEASON 6 IS
                       </span>
                     </p>
                     <div className="mt-4">
-                      <h1 className="text-5xl md:text-7xl font-black tracking-wider">
+                      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-wider">
                         <span className="bg-gradient-to-r from-primary-200 via-white to-primary-200 bg-clip-text text-transparent animate-pulse drop-shadow-2xl">
                           TEAM MIGHTY
                         </span>
                       </h1>
                       <div className="mt-2 text-center">
-                        <span className="inline-block bg-gradient-to-r from-primary-500/30 to-primary-400/30 px-6 py-2 rounded-full text-primary-200 font-bold text-lg animate-bounce">
+                        <span className="inline-block bg-gradient-to-r from-primary-500/30 to-primary-400/30 px-4 sm:px-6 py-2 rounded-full text-primary-200 font-bold text-base sm:text-lg animate-bounce">
                           🏆 CHAMPIONS 🏆
                         </span>
                       </div>
@@ -286,11 +286,11 @@ export default function DashboardPage() {
 
                 {/* Season End Message */}
                 <div className="text-center">
-                  <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-lg p-4">
-                    <p className="text-white font-medium text-lg">
+                  <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-lg p-3 sm:p-4">
+                    <p className="text-white font-medium text-base sm:text-lg">
                       <span className="text-green-300 font-bold">🏁 Season 6 has ended!</span>
                     </p>
-                    <p className="text-gray-300 text-base mt-2">
+                    <p className="text-gray-300 text-sm sm:text-base mt-2">
                       Thank you for participating in this amazing season. We will see you in <span className="text-emerald-300 font-bold">Season 7</span> for more exciting fantasy football action! ⚽
                     </p>
                   </div>
