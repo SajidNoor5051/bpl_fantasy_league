@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    // Fetch all completed fixtures
+    // Fetch all completed fixtures (excluding final fixture ID 21)
     const { data: fixtures, error } = await supabase
       .from('fixtures')
       .select(`
@@ -20,6 +20,7 @@ export async function GET() {
         away_team:away_team_id(team_id, team_name, team_short_name, logo_url)
       `)
       .eq('status', 'COMPLETED')
+      .neq('fixture_id', 21)
 
     if (error) {
       console.error('Error fetching fixtures:', error)

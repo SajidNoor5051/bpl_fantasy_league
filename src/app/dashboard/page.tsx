@@ -44,6 +44,7 @@ type Player = {
 
 type TopTeam = {
   teamName: string;
+  ownerName: string;
   points: number;
   rank: number;
 }
@@ -202,36 +203,35 @@ export default function DashboardPage() {
       {showNotice && (
         <div className="mb-8 relative">
           <div className="bg-gradient-to-r from-primary-600/20 via-primary-500/30 to-primary-400/20 border border-primary-500/50 rounded-xl p-6 backdrop-blur-sm relative overflow-hidden">
-            {/* Fire-like animated border elements in primary colors */}
+            {/* Celebration animated elements */}
             <div className="absolute top-0 left-0 w-full h-full">
-              {/* Top border fire dots */}
-              <div className="absolute top-1 left-4 w-2 h-2 bg-primary-400/20 rounded-full animate-bounce"></div>
-              <div className="absolute top-2 left-1/4 w-3 h-3 bg-primary-500/25 rounded-full animate-pulse delay-300"></div>
-              <div className="absolute top-1 left-1/2 w-2 h-2 bg-primary-300/20 rounded-full animate-bounce delay-500"></div>
-              <div className="absolute top-2 left-3/4 w-3 h-3 bg-primary-400/25 rounded-full animate-pulse delay-700"></div>
-              <div className="absolute top-1 right-4 w-2 h-2 bg-primary-500/20 rounded-full animate-bounce delay-1000"></div>
+              {/* Confetti-like animated elements */}
+              <div className="absolute top-2 left-4 w-3 h-3 bg-primary-400/30 rounded-full animate-bounce"></div>
+              <div className="absolute top-1 left-1/4 w-2 h-2 bg-primary-500/40 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute top-3 left-1/2 w-3 h-3 bg-primary-300/35 rounded-full animate-bounce delay-500"></div>
+              <div className="absolute top-1 left-3/4 w-2 h-2 bg-primary-400/30 rounded-full animate-pulse delay-700"></div>
+              <div className="absolute top-2 right-4 w-3 h-3 bg-primary-500/35 rounded-full animate-bounce delay-1000"></div>
               
-              {/* Bottom border fire dots */}
-              <div className="absolute bottom-1 left-6 w-3 h-3 bg-primary-400/25 rounded-full animate-pulse delay-200"></div>
-              <div className="absolute bottom-2 left-1/3 w-2 h-2 bg-primary-500/20 rounded-full animate-bounce delay-400"></div>
-              <div className="absolute bottom-1 left-2/3 w-3 h-3 bg-primary-300/25 rounded-full animate-pulse delay-600"></div>
-              <div className="absolute bottom-2 right-6 w-2 h-2 bg-primary-400/20 rounded-full animate-bounce delay-800"></div>
+              {/* Bottom celebration elements */}
+              <div className="absolute bottom-2 left-6 w-3 h-3 bg-primary-400/40 rounded-full animate-pulse delay-200"></div>
+              <div className="absolute bottom-1 left-1/3 w-2 h-2 bg-primary-500/30 rounded-full animate-bounce delay-400"></div>
+              <div className="absolute bottom-3 left-2/3 w-3 h-3 bg-primary-300/35 rounded-full animate-pulse delay-600"></div>
+              <div className="absolute bottom-1 right-6 w-2 h-2 bg-primary-400/40 rounded-full animate-bounce delay-800"></div>
               
-              {/* Left border fire dots */}
-              <div className="absolute top-1/4 left-1 w-2 h-2 bg-primary-500/15 rounded-full animate-pulse delay-150"></div>
-              <div className="absolute top-1/2 left-1 w-3 h-3 bg-primary-400/12 rounded-full animate-bounce delay-350"></div>
-              <div className="absolute top-3/4 left-1 w-2 h-2 bg-primary-300/15 rounded-full animate-pulse delay-550"></div>
+              {/* Side celebration elements */}
+              <div className="absolute top-1/4 left-1 w-2 h-2 bg-primary-500/25 rounded-full animate-pulse delay-150"></div>
+              <div className="absolute top-1/2 left-1 w-3 h-3 bg-primary-400/20 rounded-full animate-bounce delay-350"></div>
+              <div className="absolute top-3/4 left-1 w-2 h-2 bg-primary-300/25 rounded-full animate-pulse delay-550"></div>
               
-              {/* Right border fire dots */}
-              <div className="absolute top-1/4 right-1 w-3 h-3 bg-primary-400/12 rounded-full animate-bounce delay-250"></div>
-              <div className="absolute top-1/2 right-1 w-2 h-2 bg-primary-500/15 rounded-full animate-pulse delay-450"></div>
-              <div className="absolute top-3/4 right-1 w-3 h-3 bg-primary-300/12 rounded-full animate-bounce delay-650"></div>
+              <div className="absolute top-1/4 right-1 w-3 h-3 bg-primary-400/20 rounded-full animate-bounce delay-250"></div>
+              <div className="absolute top-1/2 right-1 w-2 h-2 bg-primary-500/25 rounded-full animate-pulse delay-450"></div>
+              <div className="absolute top-3/4 right-1 w-3 h-3 bg-primary-300/20 rounded-full animate-bounce delay-650"></div>
               
-              {/* Corner fire effects */}
-              <div className="absolute top-0 left-0 w-4 h-4 bg-gradient-to-br from-primary-500/20 to-primary-400/15 rounded-full animate-ping"></div>
-              <div className="absolute top-0 right-0 w-4 h-4 bg-gradient-to-bl from-primary-500/20 to-primary-400/15 rounded-full animate-ping delay-300"></div>
-              <div className="absolute bottom-0 left-0 w-4 h-4 bg-gradient-to-tr from-primary-500/20 to-primary-400/15 rounded-full animate-ping delay-600"></div>
-              <div className="absolute bottom-0 right-0 w-4 h-4 bg-gradient-to-tl from-primary-500/20 to-primary-400/15 rounded-full animate-ping delay-900"></div>
+              {/* Corner celebration effects */}
+              <div className="absolute top-0 left-0 w-4 h-4 bg-gradient-to-br from-primary-500/30 to-primary-400/25 rounded-full animate-ping"></div>
+              <div className="absolute top-0 right-0 w-4 h-4 bg-gradient-to-bl from-primary-500/30 to-primary-400/25 rounded-full animate-ping delay-300"></div>
+              <div className="absolute bottom-0 left-0 w-4 h-4 bg-gradient-to-tr from-primary-400/30 to-primary-500/25 rounded-full animate-ping delay-600"></div>
+              <div className="absolute bottom-0 right-0 w-4 h-4 bg-gradient-to-tl from-primary-500/30 to-primary-400/25 rounded-full animate-ping delay-900"></div>
             </div>
             
             {/* Close button */}
@@ -244,62 +244,54 @@ export default function DashboardPage() {
 
             {/* Content */}
             <div className="relative z-10">
-              <div className="flex items-center mb-4">
-                <div className="bg-primary-500/20 p-2 rounded-lg mr-3">
-                  <AlertCircle className="w-6 h-6 text-primary-300" />
+              <div className="flex items-center mb-6">
+                <div className="bg-gradient-to-r from-primary-500/30 to-primary-400/30 p-3 rounded-lg mr-4">
+                  <Trophy className="w-8 h-8 text-primary-300 animate-pulse" />
                 </div>
-                <h3 className="text-xl font-bold text-white">
-                  <span className="bg-gradient-to-r from-primary-300 to-primary-100 bg-clip-text text-transparent">
-                    ⚠️ IMPORTANT NOTICE!
+                <h3 className="text-2xl font-bold">
+                  <span className="bg-gradient-to-r from-primary-300 via-primary-200 to-primary-100 bg-clip-text text-transparent animate-pulse">
+                    🏆 BPL SEASON 6 CHAMPION ANNOUNCED! 🏆
                   </span>
                 </h3>
               </div>
 
-              <div className="space-y-4">
-                {/* Team Limit Removal - Most Important for Final */}
-                <div className="flex items-start bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/40 rounded-lg p-3">
-                  <div className="bg-amber-500/20 p-1.5 rounded-full mr-3 mt-0.5">
-                    <Trophy className="w-4 h-4 text-amber-400 animate-pulse" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-white font-medium text-sm sm:text-base">
-                      <span className="text-amber-400 font-bold">🏆 FINAL MATCH SPECIAL RULE:</span> There is <span className="text-amber-300 font-bold">NO LIMIT</span> on how many players you can select from any single team for the <span className="text-amber-300 font-bold">BPL Season 6 Final</span>! Stack your team with your favorite players! 🚀
+              <div className="space-y-6">
+                {/* Winner Announcement */}
+                <div className="text-center">
+                  <div className="bg-gradient-to-r from-primary-500/20 via-primary-400/20 to-primary-300/20 border-2 border-primary-400/50 rounded-xl p-6 mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                      <span className="bg-gradient-to-r from-primary-300 via-primary-200 to-primary-100 bg-clip-text text-transparent">
+                        🎉 CONGRATULATIONS! 🎉
+                      </span>
+                    </h2>
+                    <p className="text-2xl md:text-3xl font-bold text-white">
+                      <span className="bg-gradient-to-r from-primary-300 via-primary-200 to-primary-100 bg-clip-text text-transparent">
+                        THE WINNER OF BPL SEASON 6 IS
+                      </span>
                     </p>
+                    <div className="mt-4">
+                      <h1 className="text-5xl md:text-7xl font-black tracking-wider">
+                        <span className="bg-gradient-to-r from-primary-200 via-white to-primary-200 bg-clip-text text-transparent animate-pulse drop-shadow-2xl">
+                          TEAM MIGHTY
+                        </span>
+                      </h1>
+                      <div className="mt-2 text-center">
+                        <span className="inline-block bg-gradient-to-r from-primary-500/30 to-primary-400/30 px-6 py-2 rounded-full text-primary-200 font-bold text-lg animate-bounce">
+                          🏆 CHAMPIONS 🏆
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Transfer Deadline - Most Important */}
-                <div className="flex items-start bg-primary-500/10 border border-primary-500/30 rounded-lg p-3">
-                  <div className="bg-primary-500/20 p-1.5 rounded-full mr-3 mt-0.5">
-                    <Clock className="w-4 h-4 text-primary-400 animate-pulse" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-white font-medium text-sm sm:text-base">
-                      <span className="text-primary-400 font-bold">TRANSFER DEADLINE:</span> The transfer deadline for this gameweek is on <span className="text-primary-300 font-bold">Friday, 18 July at 1:00 PM</span>.
+                {/* Season End Message */}
+                <div className="text-center">
+                  <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-lg p-4">
+                    <p className="text-white font-medium text-lg">
+                      <span className="text-green-300 font-bold">🏁 Season 6 has ended!</span>
                     </p>
-                  </div>
-                </div>
-
-                {/* Bench Boost Message */}
-                <div className="flex items-start">
-                  <div className="bg-green-500/20 p-1.5 rounded-full mr-3 mt-0.5">
-                    <Gift className="w-4 h-4 text-green-400" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-white font-medium text-sm sm:text-base">
-                      You have got <span className="text-green-400 font-bold">Bench Boost</span> <b>(which means all 15 players of your team are available for points)</b> for the rest of Season 6 of BUET Premier League!
-                    </p>
-                  </div>
-                </div>
-
-                {/* Unlimited Transfers Message */}
-                <div className="flex items-start">
-                  <div className="bg-blue-500/20 p-1.5 rounded-full mr-3 mt-0.5">
-                    <Zap className="w-4 h-4 text-blue-400" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-white font-medium text-sm sm:text-base">
-                      You can make <span className="text-blue-400 font-bold">unlimited transfers</span> for the remaining gameweeks of BPL Season 6!
+                    <p className="text-gray-300 text-base mt-2">
+                      Thank you for participating in this amazing season. We will see you in <span className="text-emerald-300 font-bold">Season 7</span> for more exciting fantasy football action! ⚽
                     </p>
                   </div>
                 </div>
@@ -307,10 +299,10 @@ export default function DashboardPage() {
             </div>
 
             {/* Enhanced decorative elements */}
-            <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-primary-500/10 to-primary-400/5 rounded-full animate-pulse"></div>
-            <div className="absolute -top-2 -left-2 w-20 h-20 bg-gradient-to-br from-primary-400/10 to-primary-300/5 rounded-full animate-pulse delay-500"></div>
-            <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-gradient-to-tr from-primary-500/8 to-primary-400/5 rounded-full animate-pulse delay-1000"></div>
-            <div className="absolute -top-2 -right-2 w-18 h-18 bg-gradient-to-bl from-primary-300/8 to-primary-400/5 rounded-full animate-pulse delay-1500"></div>
+            <div className="absolute -bottom-2 -right-2 w-24 h-24 bg-gradient-to-br from-primary-500/15 to-primary-400/10 rounded-full animate-pulse"></div>
+            <div className="absolute -top-2 -left-2 w-20 h-20 bg-gradient-to-br from-primary-400/15 to-primary-300/10 rounded-full animate-pulse delay-500"></div>
+            <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-gradient-to-tr from-primary-500/12 to-primary-400/8 rounded-full animate-pulse delay-1000"></div>
+            <div className="absolute -top-2 -right-2 w-18 h-18 bg-gradient-to-bl from-primary-300/12 to-primary-400/8 rounded-full animate-pulse delay-1500"></div>
           </div>
         </div>
       )}
@@ -448,7 +440,7 @@ export default function DashboardPage() {
                       <span className="text-xs bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded mr-2">
                         #{team.rank}
                       </span>
-                      <span className="text-xs text-gray-400">Fantasy Team</span>
+                      <span className="text-xs text-gray-400"> {team.ownerName}</span>
                     </div>
                   </div>
                   <div className="bg-primary-600/20 px-2 py-1 rounded">
